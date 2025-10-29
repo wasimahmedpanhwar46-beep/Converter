@@ -8,11 +8,14 @@
   body {
     @apply bg-slate-100 text-slate-800 antialiased;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
-  .tool-card {
-    @apply bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-primary-300 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col items-start text-left;
+  .plant-card {
+    @apply bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-green-300 hover:-translate-y-1 transition-all duration-300 block;
   }
 
   .tab-btn {
@@ -20,18 +23,10 @@
   }
 
   .tab-btn.active {
-    @apply bg-primary-600 text-white shadow-md;
+    @apply bg-green-600 text-white shadow-md;
   }
 
   .tab-btn:not(.active) {
-    @apply text-slate-600 hover:bg-slate-200;
-  }
-  
-  .chat-bubble {
-    @apply bg-blue-600 text-white;
-  }
-  
-  .user-bubble {
-    @apply bg-slate-200 text-slate-800;
+    @apply text-slate-600 hover:bg-slate-300;
   }
 }
